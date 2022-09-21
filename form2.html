@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari&display=swap" rel="stylesheet">
+    <style>
+        input, textarea {
+            padding: 5px;
+            height: 25px;
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        input#gender {
+            padding: 0px;
+            height: auto;
+            width: auto;
+        }
+
+        * {
+            padding: 5px;
+            margin: 10px;
+            font-family: 'Anek Devanagari';
+            /* font-size: 12px; */
+        }
+
+        .button, input, textarea {
+            border-radius: 8px;
+        }
+
+        .button {
+            height: 30px;
+        }
+
+    </style>
+    <script src="/Forms/form.js"></script>
+</head>
+<body>
+    <h2 style="text-align: center;">This is a sample form with CSS</h2>
+    <h4>Personal Details:</h4>
+    <form class="form" action="/Forms/form3.html">
+        <label for="fname">First Name:</label><br>
+        <input type="text" name="fname" id="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" name="lname" id="lname"><br>
+        <label for="contact">Contact Number:</label><br>
+        <input type="text" name="contact" id="contact"><br>
+        <label for="email">Email Address:</label><br>
+        <input type="email" name="email" id="email"><br>
+        <label for="address">Address:</label><br>
+        <textarea name="address" id="address" style="height: 200px; width: 300px;"></textarea><br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="gender" id="gender" value="male">Male
+        <input type="radio" name="gender" id="gender" value="female">Female
+        <input type="radio" name="gender" id="gender" value="other">Other<br>
+        <input class="button" type="submit" onclick="form1submit()">
+        <input class="button" type="reset" onclick="alert('Rest Successfully')">
+    </form>
+</body>
+
+</html>

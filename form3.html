@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari&display=swap" rel="stylesheet">
+    <style>
+        .slider {
+            height: 15px;
+            border-radius: 5px;
+        }
+        input, select.option {
+            padding: 5px;
+            height: 25px;
+            width: 300px;
+            border: 1px solid black;
+        }
+        .button, input, select {
+            border-radius: 8px;
+            height: 30px;
+        }       
+        * {
+            padding: 5px;
+            margin: 10px;
+            font-family: 'Anek Devanagari';
+            /* font-size: 12px; */
+        }
+        textarea {
+            width: 60px;
+            box-decoration-break: unset;
+        }
+    </style>
+    <script src="/Forms/form.js"></script>
+</head>
+<body>
+    <h2 style="text-align: center;">This is a sample form with CSS</h2>
+    <h4>Educational Details:</h4>
+    <form action="/Forms/final.html">
+        <label for="qualification" id="university">Highest Qualification:</label><br>
+        <select>
+            <option selected></option>
+            <option value="jntuh" name="jntuh">JNTUH</option>
+            <option value="ou" name="ou">OU</option>
+            <option value="ku" name="ku">KU</option>
+            <option value="other" name="other">Other</option>
+        </select><br>
+        <label class="qualif" for="name">College Name:</label><br>
+        <input type="text" class="qualif" name="cname" id="cname"><br>
+        <label for="major" class="qualif" id="qualif">Major in:</label><br>
+        <select>
+            <option selected></option>
+            <option id="cse" name="cse">Computer Science & Engineering</option>
+            <option id="mech" name="mech">Mechnical Engineering</option>
+            <option id="civil" name="civil">Civil Engineering</option>
+            <option id="petrol" name="petrol">Pertoleum Engineering</option>
+            <option id="other" name="other">Other</option>
+        </select><br>
+        <label for="yop">Year of Passing:</label><br>
+        <input type="number" class="qualif" name="yop" id="yop"><br>
+        <label for="marks">Marks:</label>
+        <input class="slider" id="myslider" type="range" min="0" max="10" value="0" step="0.5" list="tickmarks" onclick="sliderChange(50)">
+        <datalist id="tickmarks">
+            <option value="0" label="0"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            <option value="6" label="6"></option>
+            <option value="7" label="7"></option>
+            <option value="8" label="8"></option>
+            <option value="9" label="9"></option>
+        </datalist>
+        <textarea id="sliderresult" rows="1" cols="1" readonly></textarea><br>
+        <label for="startdate" id="sdate">Start Date:</label><input type="date" id="sdate"><br>
+        <label for="enddate" id="edate">End Date:</label><input type="date" id="edate"><br>
+        <input type="submit" value="Next >" onclick="form2submit()">
+    </form>
+</body>
+</html>

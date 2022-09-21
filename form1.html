@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h3>Submit your details:</h3>
+    <form name="details">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="adress">Address:</label><br>
+        <input type="textarea" id="address" name="address" style="width:500px ;"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <label for="repassword">Re-enter Password:</label><br>
+        <input type="password" id="repassword" name="repassword"><br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" value="Male" name="gender"><label for="gender">Male</label>
+        <input type="radio" id="female" value="Female" name="gender"><label for="gender">Female</label>
+        <input type="radio" id="other" value="Other" name="gender"><label for="gender">Other</label><br>
+        <label>Choose your preference:</label><br>
+        <input type="checkbox" id="pref" name="pref" value="car"><label for="pref">Cars</label><br>
+        <input type="checkbox" id="pref" name="pref" value="bike"><label for="pref">Bike</label><br>
+        <input type="checkbox" id="pref" name="pref" value="Aeroplane"><label for="pref">Aeroplane</label><br>
+        <label>Select your preferred location:</label><br>
+        <select id="loc" name="loc">
+            <option value="china">China</option>
+            <option value="india">India</option>
+            <option value="uk">UK</option>
+            <option value="usa" selected>USA</option>
+        </select><br>
+        <input type="submit" onclick="alert('Submitted')" value="Submit">
+        <input type="reset" onclick="alert('Reset Done')"" value="Reset">
+    </form>
+</body>
+</html>
